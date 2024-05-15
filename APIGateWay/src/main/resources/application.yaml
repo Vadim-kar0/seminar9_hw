@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: APIGateWay
+  cloud:
+    gateway:
+      routes:
+        - id: seminar7_hw
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/seminar7_hw/**
+        - id: Microservice2
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/serviceB/**
